@@ -1,2 +1,11 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Welcome!</h1>
+<p>Choose 2 subreddits:</p>
+<%= form_tag("/render_quiz", method: "post") do %>
+  <%= label_tag(:sub1, "First subreddit:") %>
+  <%= text_field_tag(:sub1) %>
+  <br>
+  <%= label_tag(:sub2, "Second subreddit:") %>
+  <%= text_field_tag(:sub2) %>
+  <br>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>

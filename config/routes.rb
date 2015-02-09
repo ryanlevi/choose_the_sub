@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   get 'home/index'
 
   get 'home/quiz'
+  get '/quiz', to: 'home#quiz', as: 'quiz'
+
+  post 'home/render_quiz'
+  post '/render_quiz', to: 'home#render_quiz', as: 'render_quiz'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

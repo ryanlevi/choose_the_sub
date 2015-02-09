@@ -1,2 +1,13 @@
-<h1>Home#quiz</h1>
-<p>Find me in app/views/home/quiz.html.erb</p>
+<h1>Quiz</h1>
+<div class="row">
+  <div class="col-md-6">
+    <%= form_tag("/next1", method: "post") do %>
+      <%= submit_tag "/r/#{@sub1}", class: "btn btn-danger" %>
+    <% end %>
+  </div>
+  <div class="col-md-6">
+    <%= form_tag("/next2", method: "post") do %>
+      <%= submit_tag "/r/#{@sub2}", class: "btn btn-danger" %>
+    <% end %>
+  </div>
+</div>
